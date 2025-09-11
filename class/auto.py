@@ -30,11 +30,28 @@ class auto():
         else:
             print("¡Ya déjame descansar por favor!")
 
-autoMaria=auto("Ferari","clasico",2000,19000)
-autoJose=auto("mercedes","lugoso",1996,20001)
-AutoNatalia=auto("camaro","moderno",2010,1200000)
+    @classmethod
+    def ToyotaAuto(cls):
+        marca="Toyota"
+        modelo="deportivo"
+        año=2025
+        return cls(marca,modelo,año)
+    
+    @classmethod
+    def ferariAuo(cls):
+        marca="ferrari"
+        modelo="moderno"
+        año=2000
+        return cls(marca,modelo,año)
+    
+    @staticmethod
+    def validarKilometraje (auto1,auto2):
+        if auto1.kilometraje == auto2.kilometraje:
+            return"Los dos autos tiene el mismo kilometraje"
+        return"El kilometraje de los autos son diferentes"
 
-print(autoMaria.mostrarInfirmacio())
-print(autoJose.actualizarKilometraje(1000000))
-print(AutoNatalia.realizarViaje(20000))
-autoMaria.estadoAuto()
+    @staticmethod
+    def validarAño (auto1,auto2):
+        if auto1.año == auto2.año:
+            return"Los dos autos tiene el mismo año"
+        return"El año de los autos son diferentes"
