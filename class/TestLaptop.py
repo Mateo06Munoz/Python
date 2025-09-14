@@ -1,10 +1,11 @@
 from laptop import laptop
-
+from laptapGaming import laptopGaming
+from laptapBusiness import laptapBusiness
 
 laptopPepitp=laptop("lenovo","i7",32)
 laptopMaria=laptop("lenovo","i7",32,600)
 
-for numero in range(1,1001):
-    asusLaptop=laptop.asusLaptop(numero)
-    print(asusLaptop.__dict__)
-#print(laptop.compararCostos(laptopPepitp,laptopMaria))
+laptopJuanito=laptopGaming("MSI","i7",4,"RTX 8GB")
+laptopNatalia=laptapBusiness("MSI","i7",4,"RTX 8GB",100,2)
+
+print(laptopNatalia.realizarDiagnosticoSistma())
