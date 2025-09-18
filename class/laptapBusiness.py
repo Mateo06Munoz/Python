@@ -7,6 +7,9 @@ class laptapBusiness(laptop):
         self.espacio=espacio
         self.duracionBateria=duracionBateria
 
+    def __str__(self):
+        return f"Marca: {self.marca}\n Procesador: {self.procesador}\n Memoria: {self.memoria}\n  espacio: {self.espacio}\n Duracion de bateria: {self.duracionBateria} \nCosto {self.costo}\n Impuestos {self.impuestos}"
+
     def realizarDiagnosticoSistma(self):
         dignostico=super().realizarDiagnosticoSistma()  
         resultado=self.verificarCopnectividadRed()
